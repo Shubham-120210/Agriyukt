@@ -1,0 +1,91 @@
+name: agriyukt_app
+description: A new Flutter project for AgriYukt.
+publish_to: 'none'
+version: 1.0.0+17
+
+environment:
+  sdk: ">=3.2.3 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Localization
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.20.2
+  translator: ^1.0.0
+  timeago: ^3.6.1
+
+  # Backend
+  supabase_flutter: ^2.8.1
+
+  # UI & Fonts
+  google_fonts: ^6.2.1
+  fl_chart: ^0.66.0
+  cached_network_image: ^3.3.1
+
+  # Forms & Input
+  pinput: ^4.0.0
+  flutter_typeahead: ^5.2.0  # 🚀 ADDED FOR CROP API SEARCH
+  dropdown_button2: ^2.3.9   # 🚀 ADDED FOR VARIETY DROPDOWNS
+
+  # Network
+  http: ^1.2.0
+  url_launcher: ^6.3.2
+
+  # Image & AI
+  image_picker: ^1.2.1
+  image_cropper: ^8.0.2
+  flutter_image_compress: ^2.4.0
+  google_mlkit_text_recognition: ^0.15.1
+  google_generative_ai: ^0.4.6
+
+  # Maps & Location
+  geolocator: ^13.0.1 # 🛡️ FIX: Adjusted to stable version so it downloads properly
+  google_maps_flutter: ^2.6.1
+  map_launcher: ^3.1.0
+  flutter_polyline_points: ^3.1.0
+
+  # Storage & Utilities
+  flutter_dotenv: ^6.0.0
+  path_provider: ^2.1.5
+  csv: ^6.0.0
+  provider: ^6.1.2
+  shared_preferences: ^2.5.4
+  uuid: ^4.2.0
+
+  # Payments
+  razorpay_flutter: ^1.3.7
+  geocoding: ^4.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.7
+
+flutter:
+  uses-material-design: true
+  
+  # 🚀 CRITICAL FOR LOCALIZATION: This tells Flutter to build the .arb files
+  generate: true
+  
+  assets:
+    - .env
+    - assets/data/nashik_villages.csv
+    - assets/data/mumbai_villages.csv
+    - assets/images/
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/logo.png"
+  min_sdk_android: 21
+
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/images/logo.png
+  android: true
+  ios: true
